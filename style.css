@@ -1,0 +1,32 @@
+h1 {
+    color:aquamarine;
+}
+
+/* Selector de ID */
+#titulo-principal {
+    color: chartreuse;
+}
+
+/* Selector de clase */
+.salmon {
+    color:salmon;
+}
+
+/* Seleccion combinada */
+p.salmon{
+    text-align: center;
+}
+
+.fondo-bisque{
+    background-color: bisque;
+}
+
+/* Combinar un estilo para varias etiquetas */
+h1,h3{
+    text-align: end;
+}
+
+/* Selector universal (no utilizar) */
+* {
+    font-family: 'Trebuchet MS';
+}
