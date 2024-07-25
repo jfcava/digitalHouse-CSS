@@ -173,3 +173,97 @@ body{
     background: url(assets/img/fondo.jpeg);
     background-size: cover;
 }
+
+.solid{
+    width: 200px;
+    height: 50px;
+    border-style: solid;
+    border-width: 10px;
+}
+.dotted{
+    width: 200px;
+    height: 50px;
+    border-style: dotted;
+    border-radius: 50px;
+}
+.dashed{
+    width: 200px;
+    height: 50px;
+    border: 5px dashed red;
+}
+.double{
+    width: 200px;
+    height: 50px;
+    border-style: double;
+}
+.groove{
+    width: 200px;
+    height: 50px;
+    border-style: groove;
+}
+.ridge{
+    width: 200px;
+    height: 50px;
+    border-style: ridge;
+}
+.inset{
+    width: 200px;
+    height: 50px;
+    border-style: inset;
+}
+.outset{
+    width: 200px;
+    height: 50px;
+    border-style: outset;
+}
+.none{
+    width: 200px;
+    height: 50px;
+    border-style: none;
+}
+.hidden{
+    width: 200px;
+    height: 50px;
+    border-style: hidden;
+}
+.mix{
+    width: 200px;
+    height: 50px;
+    border-style: solid dashed dotted;
+}
+
+.titulo-caja{
+    text-align: center;
+}
+
+.cajita{
+    background-color: red;
+    border: 2px solid black;
+    width: 300px;
+    height: 150px;
+    margin: 100px; /* 100px ARRIBA, ABAJO, IZQUIERDA Y DERECHA */
+}
+
+.cajita2{
+    background-color: blue;
+    border: 2px solid black;
+    width: 300px;
+    height: 150px;
+    margin: 100px 50px; /* 100px ARRIBA Y ABAJO - 50px DERECHA Y IZQUIERDA */
+}
+
+.cajita3{
+    background-color: green;
+    border: 2px solid black;
+    width: 300px;
+    height: 150px;
+    margin: 100px 100px 50px; /* 100px ARRIBA - 100px ABAJO y 50px DERECHA e IZQUIERDA */
+}
+
+.cajita4{
+    background-color: yellow;
+    border: 2px solid black;
+    width: 300px;
+    height: 150px;
+    margin: 100px 50px 80px 40px; /* SENTIDO HORARIO - 100px ARRIBA, 50px DERECHA, 80px ABAJO y 40px IZQUIERDA */
+}
