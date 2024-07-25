@@ -30,3 +30,146 @@ h1,h3{
 * {
     font-family: 'Trebuchet MS';
 }
+
+
+/* Los estilos que pueden tomar los TEXT-DECORATION-LINE son:
+solid, double, dotted, dashed, wavy */
+.overline{
+    text-decoration: overline red 10px;
+    /* 
+    CON LA LINEA DE ARRIBA SE RESUMEN ESTAS TRES:
+    text-decoration-line: overline;
+    text-decoration-color: red;
+    text-decoration-thickness: 10px; */
+}
+
+.line-through{
+    text-decoration-line: line-through;
+    text-decoration-style: wavy;
+}
+
+.underline{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+.mix{
+    text-decoration-line: overline underline;
+}
+
+/* FORMATO DE TEXTO UPPER, LOWER y CAPITALIZE */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.espaciado-texto{
+    text-indent:50px; /* Genera una sangria al comienzo del parrafo*/
+    letter-spacing: 1px; /* Espaciado de letras */
+    line-height: 1.5; /* Altura de la linea - Formato factor, 1 es 100% */
+    word-spacing: 2px; /* Espaciado entre palabras */
+    
+    /*white-space: nowrap;  Con esta propiedad ignora el div o el contenedor al que pertenece y se va de la pantalla */
+}
+
+.textShadow{
+    /* Indica 2px a la derecha, 2px para abajo, 2px de difuminar y el color de la sombra
+    si son en negativo, van para la izquierda y para arriba */
+    text-shadow: 2px 2px 2px grey;
+}
+
+.fuentes{
+    /* La primer fuente es la que seleccionamos, si el navegador no la encuentra
+    sigue con la otra y asi sucesivamente */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700; /* Indicamos el grosor - BOLD */
+    font-style: italic; /* Normal - Italica - Oblicua */
+    font-variant: small-caps; /* Primer letra grande y el resto chiquitas */
+}
+
+.fuentes-resumida{
+    /* Resumo las propiedades anteriores en una sola linea */
+    font: italic small-caps 20px Trebuchet MS;
+}
+
+.fuenteDeGoogle{
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.desordenada {
+    list-style-type: square;
+}
+
+.ordenada{
+    list-style-type:upper-roman;
+}
+
+.lista-imagen{
+    list-style-image: url(assets/img/gato.png); /* Utilizo un icono de viñeta */
+    list-style-position: inside; /* El icono se mete dentro del texto y no quedan alineados */
+}
+
+table, th, td{
+    border: 1px, solid black;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(234, 234, 234);
+}
+
+tr:hover{
+    background-color: aquamarine;
+}
+
+th{
+    background-color: aqua;
+    height: 30px;
+}
+
+table{
+    /* Para que el borde no se vea doble */
+    border-collapse: collapse;
+    width: 80%;
+    margin: 10px;
+}
+
+
+.colores{
+    color: black;
+    /* El ultimo valor es el canal alpha que va de 0 a 1 */
+    /* Tambien se puede controlar el canal alpha con la propiedad OPACITY */
+    background-color: rgba(36, 167, 237, 0.5); 
+}
+
+/* FONDOS */
+
+/* body{
+    background-image: url(assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+
+    TAMBIEN PUEDE ESCRIBIRSE EN UNA SOLA LINEA
+    background: #e58383 url(assets/img/fondo.jpg) no-repeat right top;
+} */
+
+body{
+    background: url(assets/img/fondo.jpeg);
+    background-size: cover;
+}
