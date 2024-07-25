@@ -267,3 +267,29 @@ body{
     height: 150px;
     margin: 100px 50px 80px 40px; /* SENTIDO HORARIO - 100px ARRIBA, 50px DERECHA, 80px ABAJO y 40px IZQUIERDA */
 }
+
+.outline{
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    border-style: solid;
+    border-width: 10px;
+    /* OUTLINE es una linea que va desde el borde para afuera */
+    outline: 5px solid red;
+    /* Distancia del outline al borde */
+    outline-offset: 5px;
+}
+
+.max-width{
+    background-color: beige;
+    border: 2px solid black;
+    margin: auto;
+    max-width: 500px;
+}
+
+.width{
+    background-color: beige;
+    border: 2px solid black;
+    margin: auto;
+    width: 500px;
+}
