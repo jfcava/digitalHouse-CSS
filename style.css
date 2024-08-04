@@ -335,3 +335,95 @@ body{
     height: 100px;
 }
 
+/* Link - Cuando todavia no lo visitamos */
+.link-pseudoclase:link{
+    color: chocolate;
+}
+
+/* Visited - Cuando ya le hicimos click */
+.link-pseudoclase:visited{
+    color:blueviolet;
+}
+
+/* Hover - Cuando pasamos el mouse por encima */
+.link-pseudoclase:hover{
+    background-color: aqua;
+}
+
+/* Active - Cuando le estamos haciendo click */
+.link-pseudoclase:active{
+    color:blue
+}
+
+/* Cuando le hago foco a un elemento tipo input */
+.input-pseudoclase:focus{
+    background-color: aqua;
+}
+
+/* Cambio de color solo la primer linea del p, es RESPONSIVO */
+.parrafo-pseudoelemento::first-line{
+    color: blue;
+}
+
+/* Cambio el color y el tamaño de la primera letra del parrafo */
+.parrafo-pseudoelemento::first-letter{
+    color: red;
+    font-size: 50px;
+}
+
+/* Agrego una imagen ANTES del parrafo */
+.parrafo-pseudoelemento::before{
+    content: url(assets/img/gato.png);
+}
+
+/* Agrego una imagen DESPUES del parrafo */
+.parrafo-pseudoelemento::after{
+    content: url(assets/img/gato.png);
+}
+
+/* Modificamos los marcadores de una lista */
+.lista-para-marker li::marker{
+    color: red;
+    font-size: larger;
+}
+
+/* Modificamos la seleccion de los elementos que queremos */
+.lista-para-marker li::selection{
+    background-color: aquamarine;
+}
+
+/* Cambio opacidad de imagen (de 0 a 1) */
+.imagen-transparencia{
+    width: 500px;
+    opacity: 0.5;
+}
+
+.imagen-transparencia:hover{
+    opacity: 1;
+}
+
+/* Selecciono todos los que tengan el atributo "target" */
+.link-atributos[target]{
+    background-color: aqua;
+}
+
+/* Selecciono todos los que tengan el atributo target="_top" */
+.link-atributos[target="_top"]{
+    background-color: blueviolet;
+}
+
+/* Selecciono las clases que contienen la palabra "lorem" (debe ser la palabra entera) */
+[class~="lorem"]{
+    background-color: chartreuse;
+}
+
+/* Selecciono las clases que contienen la palabra "tinto" (puede ser una parte de la palabra) */
+[class*="tinto"]{
+    background-color: chocolate;
+}
+
+.juego-dardos{
+    display: flex;
+    height: 500px;
+    background-color: beige;
+}
