@@ -427,3 +427,176 @@ body{
     height: 500px;
     background-color: beige;
 }
+
+/* De esta forma tenemos un contenedor que funciona como cuadricula */
+.grid-container{
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    background-color: rgb(63, 196, 196);
+    border: 2px groove black;
+    padding: 10px;
+    gap: 5px;
+}
+
+.grid-item{
+    background-color: beige;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.item1{
+    grid-column-start: 1; /*Tambien se puede usar grid-column: 1/3 */
+    grid-column-end: 3;
+}
+
+.item1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item7{
+    grid-area: 2 / 1 / 2 / 3; /* la primera y la tercera son las filas y la segunda y la cuarta son las columnas */
+}
+
+.grid-container-areas{
+    display: grid; 
+    grid-template-areas: 
+    "header header header"
+    "navbar navbar navbar"
+    "noticias . publicidades"
+    "noticias . publicidades"
+    "noticias . publicidades"
+    "footer footer footer";
+
+    background-color: rgb(63, 196, 196);
+    border: 2px groove black;
+    padding: 10px;
+    gap: 5px;
+}
+
+.area1{
+    grid-area: header;
+}
+
+.area2{
+    grid-area: navbar;
+}
+
+.area3{
+    grid-area: noticias;
+}
+
+.area4{
+    grid-area: publicidades;
+}
+
+.area5{
+    grid-area: footer;
+}
+
+
+/* Media queries para disenio responsivo: Al bajar de 992, se distribuyen distintos los elementos */
+@media screen and (max-width: 992px){
+    .grid-container-areas{
+        grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "noticias noticias publicidades"
+        "noticias noticias publicidades"
+        "noticias noticias publicidades"
+        "footer footer footer";
+    }
+}
+
+@media screen and (max-width: 600px){
+    .grid-container-areas{
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "noticias "
+        "publicidades"
+        "publicidades"
+        "footer";
+        gap: 2px;
+    }
+}
+ 
+
+/* TRANSICIONES */
+.transicion{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    transition: width 2s, height 5s, transform 2s;
+    transition-timing-function: ease-in; /* Pueden ser linear - ease - ease in - ease out - ease in out */
+
+}
+
+.transicion:hover{
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+
+.btn-transicion{
+    background-color: aqua;
+    transition: background-color 1s;
+}
+
+.btn-transicion:hover{
+    background-color: blueviolet;
+}
+
+
+/* ANIMACIONES */
+
+.animacion{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: prueba2;
+    animation-duration: 3s;
+    animation-delay: 2s; /* delay para arrancar */
+    animation-iteration-count: 3; /* veces que hace el bucle - se puede poner INFINITE para que sea infinito */
+    animation-direction: alternate; /* va y vuelve, en un direccion y al contrario */
+    /* shorthand: animation: prueba 5s ease 2s infinite alternate */
+}
+
+@keyframes prueba{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: blue;
+    }
+}
+
+@keyframes prueba2{
+    0%{
+        background-color: red;
+        height: 150px;
+        width: 150px;
+    }
+    25%{
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+    }
+    50%{
+        background-color: yellow;
+        height: 250px;
+        width: 250px;
+    }
+    75%{
+        background-color: blue;
+        height: 50px;
+        width: 50px;
+    }
+    100%{
+        background-color: red;
+        height: 150px;
+        width: 150px;
+    }
+}
